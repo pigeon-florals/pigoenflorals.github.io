@@ -36,8 +36,8 @@ body { background: var(--pigeon-cream); color: var(--pigeon-dark); font-family: 
 .palette-btn[data-palette="white-green"].active { background: #4A7A28; color: #fff; }
 .palette-btn[data-palette="lavender"] { background: #F3EEF8; color: #6B3FA0; border-color: #A686C7; }
 .palette-btn[data-palette="lavender"].active { background: #A686C7; color: #fff; }
-.palette-btn[data-palette="burgundy"] { background: #F7EEF5; color: #6B2D5E; border-color: #9B5B8C; }
-.palette-btn[data-palette="burgundy"].active { background: #9B5B8C; color: #fff; }
+.palette-btn[data-palette="burgundy"] { background: #F7EAEE; color: #7A2040; border-color: #A63055; }
+.palette-btn[data-palette="burgundy"].active { background: #7A2040; color: #fff; }
 .palette-swatch { display: none; align-items: center; gap: 10px; justify-content: center; padding: 0.6rem 1rem; margin: 0.5rem auto 1rem; max-width: 520px; border-radius: 4px; flex-wrap: wrap; }
 .palette-swatch.visible { display: flex; }
 .swatch-dot { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
@@ -64,7 +64,6 @@ body { background: var(--pigeon-cream); color: var(--pigeon-dark); font-family: 
 .faq-a a { color: var(--pigeon-orange); }
 .footer-cta { text-align: center; padding: 2rem 1rem; margin-top: 1rem; background: var(--pigeon-chartreuse); border-radius: 3px; }
 .footer-cta p { font-family: var(--font-brand); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #3A5A00; font-weight: 700; }
-
 @media (max-width: 600px) {
   .page-root { padding: 0 1rem 3rem; }
   .hero-bar { margin: 0 -1rem 2rem; }
@@ -111,9 +110,9 @@ body { background: var(--pigeon-cream); color: var(--pigeon-dark); font-family: 
     <div class="swatch-dot" style="background:#A686C7;"></div><div class="swatch-dot" style="background:#CEB6E6;"></div><div class="swatch-dot" style="background:#E2C6E5;"></div><div class="swatch-dot" style="background:#FABEAA;"></div><div class="swatch-dot" style="background:#FFB08A;"></div>
     <span class="swatch-label" style="color:#6B3FA0;">Plum &middot; lilac &middot; soft lavender &middot; peach &middot; coral</span>
   </div>
-  <div id="swatch-burgundy" class="palette-swatch" style="background:#F7EEF5;">
-    <div class="swatch-dot" style="background:#9B5B8C;"></div><div class="swatch-dot" style="background:#7B4A8C;"></div><div class="swatch-dot" style="background:#863C57;"></div><div class="swatch-dot" style="background:#E5E1C7;border:1px solid #ccc;"></div><div class="swatch-dot" style="background:#B99064;"></div><div class="swatch-dot" style="background:#D4B99D;"></div><div class="swatch-dot" style="background:#A16C56;"></div>
-    <span class="swatch-label" style="color:#6B2D5E;">Plum &middot; violet &middot; mauve &middot; cream &middot; caramel &middot; blush &middot; terracotta</span>
+  <div id="swatch-burgundy" class="palette-swatch" style="background:#F7EAEE;">
+    <div class="swatch-dot" style="background:#7A2040;"></div><div class="swatch-dot" style="background:#A63055;"></div><div class="swatch-dot" style="background:#863C57;"></div><div class="swatch-dot" style="background:#E5E1C7;border:1px solid #ccc;"></div><div class="swatch-dot" style="background:#B99064;"></div><div class="swatch-dot" style="background:#D4B99D;"></div><div class="swatch-dot" style="background:#A16C56;"></div>
+    <span class="swatch-label" style="color:#7A2040;">Berry &middot; raspberry &middot; mauve &middot; cream &middot; caramel &middot; blush &middot; terracotta</span>
   </div>
   <div class="section-divider"><span class="section-label">Select your arrangements</span></div>
   <div class="items-grid" id="items-grid"></div>
@@ -140,7 +139,7 @@ var palettes = {
   "citrus": ["#E07A3A","#E8967A","#F0B8A0","#F2CB20","#8BC34A"],
   "white-green": ["#F8F6F0","#E8E4D8","#8DB86A","#4A7A28","#3A5C1A"],
   "lavender": ["#A686C7","#CEB6E6","#E2C6E5","#FABEAA","#FFB08A"],
-  "burgundy": ["#9B5B8C","#7B4A8C","#863C57","#E5E1C7","#B99064","#D4B99D","#A16C56"]
+  "burgundy": ["#7A2040","#A63055","#863C57","#E5E1C7","#B99064","#D4B99D","#A16C56"]
 };
 var lightDots = {"#F8F6F0":true,"#E8E4D8":true,"#E5E1C7":true};
 var paletteNames = {
