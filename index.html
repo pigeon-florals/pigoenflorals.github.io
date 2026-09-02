@@ -4,355 +4,184 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pigeon Florals — Custom Florals for Weddings & Events</title>
-<meta name="description" content="Custom floral design for weddings and events in Washington DC, Maryland, and Virginia. Book a free consultation with Pigeon Florals today.">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<meta name="description" content="Custom floral design for weddings and events in Washington DC, Maryland, and Virginia. Book a free consultation with Pigeon Florals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,900,100;1,9..144,900,100&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --yellow: #FFDE59;
+    --yellow: #FDE674;
     --orange: #E24C00;
-    --yellow-light: #FFF6CC;
-    --dark: #1A1200;
-    --mid: #6B4A00;
-    --muted: #A07040;
-    --white: #FFFDF5;
-    --border: rgba(226,76,0,0.12);
+    --cream: #F7EDD2;
+    --coral: #FF6F61;
+    --ink: #2B1A33;
+    --arch: 999px 999px 0 0;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Josefin Sans', sans-serif; background: var(--white); color: var(--dark); overflow-x: hidden; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { font-family: 'Josefin Sans', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.6; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
 
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,253,245,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-  .nav-logo { font-family: 'Josefin Sans', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dark); text-decoration: none; }
-  .nav-logo span { color: var(--orange); }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-  .nav-links a { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .display { font-family: 'Fraunces', serif; font-weight: 900; font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.02em; line-height: 0.95; }
+
+  /* Nav */
+  nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; }
+  .logo { font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; color: var(--ink); }
+  .nav-links { display: flex; gap: 2.25rem; list-style: none; align-items: center; }
+  .nav-links a { text-decoration: none; font-weight: 600; font-size: 0.95rem; }
   .nav-links a:hover { color: var(--orange); }
-  .nav-cta { padding: 0.6rem 1.5rem; background: var(--orange) !important; color: var(--white) !important; border-radius: 2px; font-weight: 700 !important; letter-spacing: 0.12em; }
-  .nav-cta:hover { background: var(--dark) !important; color: var(--yellow) !important; }
 
-  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 72px; }
-  .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 6rem 4rem 6rem 5rem; background: var(--yellow); }
-  .hero-eyebrow { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 600; color: var(--orange); margin-bottom: 1.5rem; }
-  .hero-title { font-family: 'Josefin Sans', sans-serif; font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 700; line-height: 1.05; letter-spacing: 0.04em; text-transform: uppercase; color: var(--dark); margin-bottom: 1.75rem; }
-  .hero-title em { font-style: italic; font-weight: 300; color: var(--orange); text-transform: none; }
-  .hero-sub { font-size: 0.95rem; font-weight: 300; letter-spacing: 0.05em; color: var(--mid); line-height: 1.9; max-width: 400px; margin-bottom: 3rem; }
-  .hero-actions { display: flex; gap: 1rem; align-items: center; }
-  .btn-primary { padding: 1rem 2.5rem; background: var(--orange); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, color 0.2s; }
-  .btn-primary:hover { background: var(--dark); color: var(--yellow); }
-  .btn-ghost { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
-  .btn-ghost:hover { color: var(--orange); }
-  .hero-right { position: relative; overflow: hidden; background: var(--orange); min-height: 500px; }
-  .hero-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .hero-badge { position: absolute; bottom: 3rem; right: 3rem; width: 110px; height: 110px; background: var(--yellow); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 2px; }
-  .hero-badge-top { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); }
-  .hero-badge-main { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); line-height: 1.3; padding: 0 8px; }
+  /* Hero */
+  .hero { min-height: 100vh; background: var(--yellow); display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: end; padding: 7rem 3rem 3rem; gap: 3rem; }
+  .hero-text { padding-bottom: 2rem; }
+  .hero h1 { font-size: clamp(3.5rem, 9vw, 8.5rem); color: var(--orange); margin-bottom: 1.5rem; }
+  .hero h1 span { display: block; color: var(--coral); }
+  .hero p { font-size: 1.15rem; font-weight: 400; max-width: 26rem; margin-bottom: 2.25rem; }
+  .btn { display: inline-block; padding: 1rem 2rem; background: var(--orange); color: var(--cream); font-weight: 700; font-size: 1rem; text-decoration: none; border-radius: 999px; border: 0; cursor: pointer; font-family: inherit; transition: background 0.2s; }
+  .btn:hover { background: var(--coral); }
+  .hero-art { position: relative; justify-self: center; width: min(100%, 420px); aspect-ratio: 172 / 237; border-radius: var(--arch); overflow: hidden; background: var(--yellow); border: 6px solid var(--orange); }
+  .hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-  .marquee-strip { background: var(--dark); color: var(--yellow); padding: 0.85rem 0; overflow: hidden; white-space: nowrap; }
-  .marquee-inner { display: inline-flex; gap: 2.5rem; animation: marquee 20s linear infinite; }
-  .marquee-inner span { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; }
-  .marquee-inner .dot { color: var(--orange); }
-  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  /* Services */
+  .services { padding: 6rem 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+  .service { text-decoration: none; display: block; }
+  .service-arch { aspect-ratio: 3 / 4; border-radius: var(--arch); background: var(--orange); margin-bottom: 1.25rem; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 2.5rem; transition: background 0.2s; overflow: hidden; }
+  .service:nth-child(2) .service-arch { background: var(--yellow); }
+  .service:nth-child(3) .service-arch { background: var(--coral); }
+  .service-arch span { font-family: 'Fraunces', serif; font-weight: 900; font-variation-settings: "SOFT" 100; font-size: clamp(1.6rem, 2.6vw, 2.4rem); line-height: 1; text-align: center; padding: 0 1rem; color: var(--cream); }
+  .service:nth-child(2) .service-arch span { color: var(--orange); }
+  .service:nth-child(3) .service-arch span { color: var(--cream); }
+  .service:hover .service-arch { transform: translateY(-4px); }
+  .service-arch { transition: transform 0.25s; }
+  .service p { font-size: 1rem; text-align: center; }
+  .service-arch { position: relative; }
+  .service-arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .service-arch span { position: relative; z-index: 1; }
+  .service-arch img.sketch { mix-blend-mode: multiply; }
+  .service-arch img + span { background: rgba(0,0,0,0.35); padding: 0.4rem 1.2rem; border-radius: 999px; font-size: clamp(1.3rem, 2vw, 1.9rem); }
+  .service .service-arch img.sketch + span { background: var(--orange); color: var(--cream); }
 
-  .services { padding: 7rem 5rem; background: var(--white); }
-  .section-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; color: var(--orange); margin-bottom: 0.75rem; }
-  .section-title { font-family: 'Josefin Sans', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.1; color: var(--dark); margin-bottom: 3.5rem; }
-  .section-title em { font-style: italic; font-weight: 300; color: var(--orange); text-transform: none; }
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); }
-  .service-card { background: var(--white); padding: 3rem 2.5rem; cursor: default; border-top: 3px solid transparent; transition: border-color 0.25s, background 0.25s; }
-  .service-card:hover { background: var(--yellow-light); border-top-color: var(--orange); }
-  .service-card.linked { cursor: pointer; }
-  .service-card.linked:hover .service-link { color: var(--orange); }
-  .service-num { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; color: var(--orange); margin-bottom: 2rem; }
-  .service-name { font-family: 'Josefin Sans', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); margin-bottom: 1rem; }
-  .service-desc { font-size: 0.85rem; font-weight: 300; color: var(--muted); line-height: 1.9; }
-  .service-link { display: inline-block; margin-top: 1.25rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  /* Contact */
+  .contact { background: var(--orange); color: var(--cream); padding: 6rem 3rem; }
+  .contact-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .contact h2 { font-size: clamp(3rem, 7vw, 6rem); color: var(--yellow); margin-bottom: 1.5rem; }
+  .contact p { font-size: 1.1rem; max-width: 24rem; margin-bottom: 2rem; }
+  .contact a.email { font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--yellow); }
+  .contact a.email:hover { color: var(--yellow); }
 
-  .statement { padding: 7rem 5rem; background: var(--orange); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .statement-quote { font-family: 'Josefin Sans', sans-serif; font-size: clamp(1.5rem, 2.5vw, 2.2rem); font-weight: 300; font-style: italic; color: var(--yellow); line-height: 1.5; margin-bottom: 1.5rem; border-left: 3px solid var(--yellow); padding-left: 2rem; }
-  .statement-attr { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,253,245,0.6); padding-left: 2rem; }
-  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,222,89,0.2); }
-  .stat { padding: 2.5rem 2rem; background: rgba(255,222,89,0.08); }
-  .stat-num { font-family: 'Josefin Sans', sans-serif; font-size: 2.8rem; font-weight: 700; color: var(--yellow); line-height: 1; margin-bottom: 0.5rem; }
-  .stat-label { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: rgba(255,253,245,0.5); }
+  form { display: grid; gap: 1rem; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  label { display: grid; gap: 0.35rem; font-size: 0.9rem; font-weight: 600; }
+  input, select, textarea { width: 100%; padding: 0.9rem 1.1rem; border: 0; border-radius: 14px; background: var(--cream); color: var(--ink); font-family: inherit; font-size: 1rem; }
+  textarea { min-height: 120px; resize: vertical; }
+  .contact .btn { background: var(--coral); color: var(--cream); justify-self: start; }
+  .contact .btn:hover { background: var(--yellow); color: var(--ink); }
+  .success { display: none; background: var(--cream); color: var(--ink); padding: 1.5rem; border-radius: 14px; font-weight: 600; }
 
-  .process { padding: 7rem 5rem; background: var(--yellow-light); }
-  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 4rem; }
-  .step { padding: 2.5rem 2rem; border-right: 1px solid var(--border); }
-  .step:last-child { border-right: none; }
-  .step-num { font-family: 'Josefin Sans', sans-serif; font-size: 3.5rem; font-weight: 700; color: rgba(226,76,0,0.15); line-height: 1; margin-bottom: 1.25rem; }
-  .step-title { font-family: 'Josefin Sans', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--dark); margin-bottom: 0.75rem; }
-  .step-desc { font-size: 0.83rem; font-weight: 300; color: var(--muted); line-height: 1.9; }
+  /* Footer */
+  footer { background: var(--coral); color: var(--cream); padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--yellow); }
+  .foot-links { display: flex; gap: 1.75rem; }
 
-  .contact { padding: 7rem 5rem; background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-  .contact-body { font-size: 0.88rem; font-weight: 300; color: var(--muted); line-height: 1.9; margin-bottom: 2.5rem; }
-  .contact-details { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
-  .contact-detail { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); display: flex; align-items: center; gap: 0.75rem; }
-  .contact-detail::before { content: ''; width: 8px; height: 8px; background: var(--orange); border-radius: 50%; flex-shrink: 0; }
-  .contact-email-link { font-size: 0.85rem; font-weight: 600; color: var(--orange); text-decoration: none; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
-  .contact-email-link:hover { color: var(--dark); }
-
-  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-  .form-input, .form-select, .form-textarea { padding: 0.85rem 1rem; background: var(--yellow-light); border: 1px solid rgba(226,76,0,0.2); border-radius: 2px; font-family: 'Josefin Sans', sans-serif; font-size: 0.88rem; font-weight: 300; color: var(--dark); outline: none; transition: border-color 0.2s; }
-  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--orange); background: var(--white); }
-  .form-textarea { resize: vertical; min-height: 110px; }
-  .form-submit { padding: 1rem 2.5rem; background: var(--orange); color: var(--white); font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; transition: background 0.2s, color 0.2s; align-self: flex-start; }
-  .form-submit:hover { background: var(--dark); color: var(--yellow); }
-
-  .form-success { display: none; padding: 1.5rem 2rem; background: var(--yellow-light); border: 1px solid rgba(226,76,0,0.2); border-left: 4px solid var(--orange); border-radius: 2px; }
-  .form-success p { font-size: 0.88rem; font-weight: 600; color: var(--dark); letter-spacing: 0.05em; }
-  .form-success span { font-weight: 300; color: var(--muted); }
-
-  footer { background: var(--dark); padding: 2.5rem 5rem; display: flex; justify-content: space-between; align-items: center; }
-  .footer-logo { font-family: 'Josefin Sans', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow); }
-  .footer-copy { font-size: 0.72rem; color: rgba(255,253,245,0.35); }
-  .footer-links { display: flex; gap: 2rem; }
-  .footer-links a { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,253,245,0.45); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--yellow); }
-
-  @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 4rem 2rem; }
-    .hero-right { min-height: 300px; }
-    .services { padding: 4rem 1.5rem; }
-    .services-grid { grid-template-columns: 1fr; }
-    .statement { padding: 4rem 1.5rem; grid-template-columns: 1fr; gap: 3rem; }
-    .process { padding: 4rem 1.5rem; }
-    .process-steps { grid-template-columns: 1fr 1fr; }
-    .contact { padding: 4rem 1.5rem; grid-template-columns: 1fr; gap: 3rem; }
-    .form-row { grid-template-columns: 1fr; }
-    footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; text-align: center; }
-    .footer-links { flex-wrap: wrap; justify-content: center; }
+  @media (max-width: 800px) {
+    nav { padding: 1.25rem 1.25rem; flex-wrap: wrap; gap: 0.75rem; }
+    .nav-links { gap: 1.1rem; }
+    .nav-links a { font-size: 0.85rem; }
+    .nav-links .btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+    .hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 3rem; align-items: start; }
+    .hero-art { width: min(100%, 300px); justify-self: start; order: -1; }
+    .services { grid-template-columns: 1fr; padding: 4rem 1.5rem; max-width: 420px; }
+    .contact { padding: 4rem 1.5rem; }
+    .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .row { grid-template-columns: 1fr; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">Pigeon <span>Florals</span></a>
+  <a href="#" class="logo">Pigeon Florals</a>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="a-la-carte.html">&#192; la carte</a></li>
-    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="a-la-carte.html">&Agrave; la carte</a></li>
+    <li><a href="#contact" class="btn">Book a call</a></li>
   </ul>
 </nav>
 
 <section class="hero">
-  <div class="hero-left">
-    <p class="hero-eyebrow">Custom Floral Design</p>
-    <h1 class="hero-title">Blooms that<br><em>tell your story</em></h1>
-    <p class="hero-sub">Custom florals for weddings and events.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Book a Consultation</a>
-      <a href="#services" class="btn-ghost">Our Work &rarr;</a>
-    </div>
+  <div class="hero-text">
+    <h1 class="display">Bold.<span>Unforgettable.</span></h1>
+    <p>Custom florals for weddings and events across DC, Maryland, and Virginia.</p>
+    <a href="#contact" class="btn">Book a consultation</a>
   </div>
-  <div class="hero-right">
-    <svg class="hero-svg" viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-      <g transform="translate(310, 300)">
-        <ellipse cx="0" cy="0" rx="90" ry="110" fill="rgba(255,222,89,0.18)" transform="rotate(-20)"/>
-        <ellipse cx="0" cy="0" rx="90" ry="110" fill="rgba(255,222,89,0.15)" transform="rotate(40)"/>
-        <ellipse cx="0" cy="0" rx="90" ry="110" fill="rgba(255,222,89,0.13)" transform="rotate(100)"/>
-        <ellipse cx="0" cy="0" rx="90" ry="110" fill="rgba(255,222,89,0.16)" transform="rotate(160)"/>
-        <ellipse cx="0" cy="0" rx="90" ry="110" fill="rgba(255,222,89,0.14)" transform="rotate(220)"/>
-        <circle cx="0" cy="0" r="38" fill="rgba(255,222,89,0.35)"/>
-        <circle cx="0" cy="0" r="22" fill="rgba(255,222,89,0.55)"/>
-      </g>
-      <g transform="translate(500, 130)">
-        <ellipse cx="0" cy="0" rx="50" ry="65" fill="rgba(255,222,89,0.14)" transform="rotate(10)"/>
-        <ellipse cx="0" cy="0" rx="50" ry="65" fill="rgba(255,222,89,0.12)" transform="rotate(82)"/>
-        <ellipse cx="0" cy="0" rx="50" ry="65" fill="rgba(255,222,89,0.14)" transform="rotate(154)"/>
-        <circle cx="0" cy="0" r="18" fill="rgba(255,222,89,0.4)"/>
-      </g>
-      <g transform="translate(120, 530)">
-        <ellipse cx="0" cy="0" rx="60" ry="75" fill="rgba(255,222,89,0.13)" transform="rotate(-30)"/>
-        <ellipse cx="0" cy="0" rx="60" ry="75" fill="rgba(255,222,89,0.11)" transform="rotate(42)"/>
-        <ellipse cx="0" cy="0" rx="60" ry="75" fill="rgba(255,222,89,0.13)" transform="rotate(114)"/>
-        <circle cx="0" cy="0" r="22" fill="rgba(255,222,89,0.38)"/>
-      </g>
-      <path d="M 310 380 Q 290 450 260 520 Q 240 570 220 620" stroke="rgba(255,253,245,0.2)" stroke-width="2" fill="none"/>
-      <path d="M 295 410 Q 240 420 200 400" stroke="rgba(255,253,245,0.15)" stroke-width="1.5" fill="none"/>
-      <ellipse cx="200" cy="398" rx="28" ry="14" fill="rgba(255,253,245,0.12)" transform="rotate(-20,200,398)"/>
-      <path d="M 308 440 Q 360 455 390 440" stroke="rgba(255,253,245,0.15)" stroke-width="1.5" fill="none"/>
-      <ellipse cx="392" cy="438" rx="24" ry="12" fill="rgba(255,253,245,0.12)" transform="rotate(15,392,438)"/>
-      <circle cx="180" cy="200" r="8" fill="rgba(255,222,89,0.25)"/>
-      <circle cx="175" cy="192" r="5" fill="rgba(255,222,89,0.35)"/>
-      <circle cx="440" cy="520" r="10" fill="rgba(255,222,89,0.22)"/>
-      <circle cx="446" cy="510" r="6" fill="rgba(255,222,89,0.32)"/>
-      <circle cx="80" cy="160" r="4" fill="rgba(255,222,89,0.3)"/>
-      <circle cx="520" cy="430" r="3" fill="rgba(255,222,89,0.25)"/>
-      <line x1="50" y1="50" x2="150" y2="50" stroke="rgba(255,222,89,0.12)" stroke-width="1"/>
-      <line x1="50" y1="50" x2="50" y2="150" stroke="rgba(255,222,89,0.12)" stroke-width="1"/>
-      <line x1="550" y1="650" x2="450" y2="650" stroke="rgba(255,222,89,0.12)" stroke-width="1"/>
-      <line x1="550" y1="650" x2="550" y2="550" stroke="rgba(255,222,89,0.12)" stroke-width="1"/>
-    </svg>
-    <div class="hero-badge">
-      <p class="hero-badge-top">✦ Est.</p>
-      <p class="hero-badge-main">Custom Florals DC & DMV</p>
-    </div>
+  <div class="hero-art">
+    <img src="pigeon.png" alt="Pencil illustration of a pigeon">
   </div>
 </section>
 
-<div class="marquee-strip">
-  <div class="marquee-inner">
-    <span>Weddings</span><span class="dot">✦</span>
-    <span>Corporate Events</span><span class="dot">✦</span>
-    <span>Galas &amp; Celebrations</span><span class="dot">✦</span>
-    <span>Ceremonies</span><span class="dot">✦</span>
-    <span>Rehearsal Dinners</span><span class="dot">✦</span>
-    <span>Elopements</span><span class="dot">✦</span>
-    <span>Bridal Showers</span><span class="dot">✦</span>
-    <span>Styled Shoots</span><span class="dot">✦</span>
-    <span>Weddings</span><span class="dot">✦</span>
-    <span>Corporate Events</span><span class="dot">✦</span>
-    <span>Galas &amp; Celebrations</span><span class="dot">✦</span>
-    <span>Ceremonies</span><span class="dot">✦</span>
-    <span>Rehearsal Dinners</span><span class="dot">✦</span>
-    <span>Elopements</span><span class="dot">✦</span>
-    <span>Bridal Showers</span><span class="dot">✦</span>
-    <span>Styled Shoots</span><span class="dot">✦</span>
-  </div>
-</div>
-
-<section class="services" id="services">
-  <p class="section-label">What we do</p>
-  <h2 class="section-title">Florals for every<br><em>meaningful moment</em></h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <p class="service-num">01 ——</p>
-      <h3 class="service-name">Wedding Florals</h3>
-      <p class="service-desc">Full-service floral design for your wedding day — from bouquets and boutonnieres to ceremony arches, reception centerpieces, and everything in between.</p>
-    </div>
-    <div class="service-card">
-      <p class="service-num">02 ——</p>
-      <h3 class="service-name">Event Design</h3>
-      <p class="service-desc">Stunning floral installations for galas, corporate events, milestone celebrations, and intimate gatherings. We design to your vision and scale.</p>
-    </div>
-    <div class="service-card linked" onclick="window.location.href='a-la-carte.html'">
-      <p class="service-num">03 ——</p>
-      <h3 class="service-name">&#192; La Carte</h3>
-      <p class="service-desc">Individual pieces and partial packages — perfect for elopements, bridal showers, rehearsal dinners, or when you just need a few standout arrangements.</p>
-      <a href="a-la-carte.html" class="service-link">Shop &#192; la carte &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<section class="statement">
-  <div>
-    <p class="statement-quote">"Every flower is a soul blossoming in nature — we simply help it find its place in yours."</p>
-    <p class="statement-attr">— Pigeon Florals</p>
-  </div>
-  <div class="stats-grid">
-    <div class="stat"><p class="stat-num">200+</p><p class="stat-label">Events designed</p></div>
-    <div class="stat"><p class="stat-num">8 yrs</p><p class="stat-label">In the craft</p></div>
-    <div class="stat"><p class="stat-num">100%</p><p class="stat-label">Custom work</p></div>
-    <div class="stat"><p class="stat-num">Local</p><p class="stat-label">Seasonal sourcing</p></div>
-  </div>
-</section>
-
-<section class="process" id="process">
-  <p class="section-label">How it works</p>
-  <h2 class="section-title">From vision<br><em>to bloom</em></h2>
-  <div class="process-steps">
-    <div class="step">
-      <p class="step-num">01</p>
-      <h3 class="step-title">Consultation</h3>
-      <p class="step-desc">We start with a call to learn about your event, aesthetic, and vision — no two designs are the same.</p>
-    </div>
-    <div class="step">
-      <p class="step-num">02</p>
-      <h3 class="step-title">Proposal</h3>
-      <p class="step-desc">You receive a custom mood board and itemized proposal, tailored to your style and budget.</p>
-    </div>
-    <div class="step">
-      <p class="step-num">03</p>
-      <h3 class="step-title">Design</h3>
-      <p class="step-desc">We source the finest seasonal blooms and handcraft every arrangement with precision and care.</p>
-    </div>
-    <div class="step">
-      <p class="step-num">04</p>
-      <h3 class="step-title">Delivery</h3>
-      <p class="step-desc">We deliver, install, and style everything on the day — so you can focus on the moment.</p>
-    </div>
-  </div>
+<section class="services" id="work">
+  <a href="#contact" class="service">
+    <div class="service-arch"><img src="weddings.jpg" alt="Arrangement of roses, orchids and mimosa on a stool"><span>Weddings &amp; Events</span></div>
+    <p>Bouquets, ceremonies, tablescapes, installs. The whole thing.</p>
+  </a>
+  <a href="a-la-carte.html" class="service">
+    <div class="service-arch"><img src="alacarte.png" alt="Hand-drawn sketch of a flower arrangement" class="sketch"><span>&Agrave; la carte</span></div>
+    <p>Pick your pieces. Order online.</p>
+  </a>
+  <a href="about.html" class="service">
+    <div class="service-arch"><img src="about.jpg" alt="Pamela on a rooftop"><span>About</span></div>
+    <p>Meet Pamela and the pigeon.</p>
+  </a>
 </section>
 
 <section class="contact" id="contact">
-  <div>
-    <p class="section-label">Get in touch</p>
-    <h2 class="section-title">Let's create<br><em>something beautiful</em></h2>
-    <p class="contact-body">Ready to bring your floral vision to life? Fill out the form and we'll be in touch within 48 hours to schedule your complimentary consultation call.</p>
-    <div class="contact-details">
-      <span class="contact-detail">Complimentary initial consultation</span>
-      <span class="contact-detail">Custom proposals within 5 business days</span>
-      <span class="contact-detail">Serving DC, Maryland & Virginia</span>
+  <div class="contact-inner">
+    <div>
+      <h2 class="display">Let's talk.</h2>
+      <p>Tell us about your date and your taste. We reply within 48 hours and the first call is free.</p>
+      <a class="email" href="mailto:pigeonflorals@gmail.com">pigeonflorals@gmail.com</a>
     </div>
-    <a href="mailto:pigeonflorals@gmail.com" class="contact-email-link">
-      ✦ pigeonflorals@gmail.com
-    </a>
-  </div>
-
-  <div class="contact-form">
-    <form id="inquiry-form" action="https://formspree.io/f/mnjwlzor" method="POST">
-      <div style="display:flex; flex-direction:column; gap:1.25rem;">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="first-name">First name</label>
-            <input type="text" id="first-name" name="first_name" class="form-input" placeholder="Jane" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="last-name">Last name</label>
-            <input type="text" id="last-name" name="last_name" class="form-input" placeholder="Smith" required>
-          </div>
+    <div>
+      <form id="inquiry-form" action="https://formspree.io/f/mnjwlzor" method="POST">
+        <div class="row">
+          <label>First name<input type="text" name="first_name" required></label>
+          <label>Last name<input type="text" name="last_name" required></label>
         </div>
-        <div class="form-group">
-          <label class="form-label" for="email">Email address</label>
-          <input type="email" id="email" name="email" class="form-input" placeholder="jane@example.com" required>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="event-type">Event type</label>
-            <select id="event-type" name="event_type" class="form-select" required>
-              <option value="">Select one...</option>
+        <label>Email<input type="email" name="email" required></label>
+        <div class="row">
+          <label>Event type
+            <select name="event_type" required>
+              <option value="">Choose one</option>
               <option>Wedding</option>
               <option>Corporate event</option>
-              <option>Gala / celebration</option>
+              <option>Gala or celebration</option>
               <option>Elopement</option>
               <option>Other</option>
             </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="event-date">Event date</label>
-            <input type="text" id="event-date" name="event_date" class="form-input" placeholder="MM / YYYY">
-          </div>
+          </label>
+          <label>Event date<input type="text" name="event_date" placeholder="MM / YYYY"></label>
         </div>
-        <div class="form-group">
-          <label class="form-label" for="message">Tell us about your vision</label>
-          <textarea id="message" name="message" class="form-textarea" placeholder="Describe your event, style, or any inspiration you have in mind..." required></textarea>
-        </div>
+        <label>What are you picturing?<textarea name="message" required></textarea></label>
         <input type="hidden" name="_subject" value="New Inquiry — Pigeon Florals Website">
         <input type="hidden" name="_replyto" value="pigeonflorals@gmail.com">
-        <button type="submit" class="form-submit">Send Inquiry</button>
-      </div>
-    </form>
-    <div class="form-success" id="form-success">
-      <p>Thank you for reaching out! ✦ <span>We'll be in touch within 48 hours.</span></p>
+        <button type="submit" class="btn">Send inquiry</button>
+      </form>
+      <div class="success" id="form-success">Sent. We'll be in touch within 48 hours.</div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span class="footer-logo">Pigeon Florals</span>
-  <span class="footer-copy">© 2026 Pigeon Florals. All rights reserved.</span>
-  <div class="footer-links">
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="a-la-carte.html">&#192; la carte</a>
+  <span class="logo" style="font-size:0.95rem;color:var(--cream)">Pigeon Florals</span>
+  <span>Leesburg, Virginia &middot; &copy; 2026</span>
+  <div class="foot-links">
+    <a href="#work">Work</a>
+    <a href="a-la-carte.html">&Agrave; la carte</a>
+    <a href="about.html">About</a>
     <a href="#contact">Contact</a>
   </div>
 </footer>
@@ -360,21 +189,11 @@
 <script>
   const form = document.getElementById('inquiry-form');
   const success = document.getElementById('form-success');
-  if (form) {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (response.ok) {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      }
-    });
-  }
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+    if (res.ok) { form.style.display = 'none'; success.style.display = 'block'; }
+  });
 </script>
 
 </body>
