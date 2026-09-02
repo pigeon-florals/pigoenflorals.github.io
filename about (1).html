@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Pigeon Florals</title>
+<meta name="description" content="Meet Pamela, the traveling florist behind Pigeon Florals. Based in Leesburg, Virginia; designing weddings and events across the DMV and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,900,100;1,9..144,900,100&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --yellow: #FDE674;
+    --orange: #E24C00;
+    --cream: #F7EDD2;
+    --coral: #FF6F61;
+    --ink: #2B1A33;
+    --arch: 999px 999px 0 0;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Josefin Sans', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.6; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+  .display { font-family: 'Fraunces', serif; font-weight: 900; font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.02em; line-height: 0.95; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; }
+  .logo { font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; color: var(--ink); }
+  .nav-links { display: flex; gap: 2.25rem; list-style: none; align-items: center; }
+  .nav-links a { text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+  .nav-links a:hover { color: var(--orange); }
+  .btn { display: inline-block; padding: 1rem 2rem; background: var(--orange); color: var(--cream); font-weight: 700; font-size: 1rem; text-decoration: none; border-radius: 999px; transition: background 0.2s; }
+  .btn:hover { background: var(--coral); }
+
+  .about { max-width: 1200px; margin: 0 auto; padding: 3rem 3rem 6rem; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 4rem; align-items: start; }
+  .about-art { width: 100%; aspect-ratio: 3 / 4; border-radius: var(--arch); overflow: hidden; background: var(--coral); border: 6px solid var(--coral); }
+  .about-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about h1 { font-size: clamp(3rem, 7vw, 6rem); color: var(--orange); margin-bottom: 2rem; }
+  .about h1 span { display: block; color: var(--coral); }
+  .about p { font-size: 1.15rem; max-width: 34rem; margin-bottom: 1.25rem; }
+  .about .btn { margin-top: 1.5rem; }
+
+  .band { background: var(--yellow); padding: 4rem 3rem; }
+  .band-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .band h2 { font-family: 'Fraunces', serif; font-weight: 900; font-variation-settings: "SOFT" 100; font-size: 1.75rem; color: var(--orange); margin-bottom: 0.5rem; line-height: 1.1; }
+  .band p { font-size: 1rem; }
+
+  footer { background: var(--coral); color: var(--cream); padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--yellow); }
+  .foot-links { display: flex; gap: 1.75rem; }
+
+  @media (max-width: 800px) {
+    nav { padding: 1.25rem 1.25rem; flex-wrap: wrap; gap: 0.75rem; }
+    .nav-links { gap: 1.1rem; }
+    .nav-links a { font-size: 0.85rem; }
+    .nav-links .btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+    .about { grid-template-columns: 1fr; padding: 1.5rem 1.5rem 4rem; gap: 2.5rem; }
+    .about-art { max-width: 320px; }
+    .band { padding: 3rem 1.5rem; }
+    .band-inner { grid-template-columns: 1fr; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Pigeon Florals</a>
+  <ul class="nav-links">
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="a-la-carte.html">&Agrave; la carte</a></li>
+    <li><a href="index.html#contact" class="btn">Book a call</a></li>
+  </ul>
+</nav>
+
+<section class="about">
+  <div class="about-art">
+    <img src="about.jpg" alt="Pamela on a rooftop">
+  </div>
+  <div>
+    <h1 class="display">Hi, I'm<span>Pamela.</span></h1>
+    <p>I run Pigeon Florals out of Leesburg, Virginia, and I travel. I've designed in New York City, the Hamptons, Nantucket, Connecticut, Miami, and Georgia, and I'm home base for weddings and events across DC, Maryland, and Virginia.</p>
+    <p>I've been in the event industry for fifteen-plus years. I've assisted planners, worked catering, worked at a winery, and done just about every job there is on the day of. Then I fell in love with the flowers and never looked back.</p>
+    <p>I like color. I like flowers that look like they might move. I like a room that makes people stop talking for a second when they walk in.</p>
+    <p>Hablo español, so if that's easier for you or your family, we can plan the whole thing that way.</p>
+    <a href="index.html#contact" class="btn">Let's talk</a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="band-inner">
+    <div>
+      <h2>Weddings and events</h2>
+      <p>Full design from the first call to the last candle. Bouquets, ceremony, tables, installs.</p>
+    </div>
+    <div>
+      <h2>&Agrave; la carte</h2>
+      <p>Smaller day? Pick the pieces you want and order straight from the site.</p>
+    </div>
+    <div>
+      <h2>Local when it counts</h2>
+      <p>Seasonal stems from nearby growers first, with a few imports when the design calls for it.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="logo" style="font-size:0.95rem;color:var(--cream)">Pigeon Florals</span>
+  <span>Leesburg, Virginia &middot; &copy; 2026</span>
+  <div class="foot-links">
+    <a href="index.html#work">Work</a>
+    <a href="a-la-carte.html">&Agrave; la carte</a>
+    <a href="about.html">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
